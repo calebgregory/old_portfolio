@@ -1,0 +1,26 @@
+.ascii {
+  background: #000;
+  color: #fff;
+
+  pre::selection {
+    background: #000; /* WebKit/Blink Browsers */
+  }
+
+  .portrait {
+    max-width: 500px;
+    max-height: 500px;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  .portrait pre {
+    font-family: Menlo;
+    font-size: 12px;
+    max-width: 500px;
+    max-height: 500px;
+    height: 100%;
+    margin: 0 auto;
+    overflow-x: scroll;
+    overflow-y: scroll;
+  }
+}
