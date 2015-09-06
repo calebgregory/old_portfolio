@@ -175,8 +175,8 @@ module.exports = function(grunt) {
         tasks: ['jade:dev']
       },
       sass: {
-        files: ['src/**/*.scss'],
-        tasks: ['sass:dev', 'autoprefixer']
+        files: ['src/**/*.less'],
+        tasks: ['less:dev', 'autoprefixer']
       },
       js: {
         files: ['src/js/**/*.js'],
