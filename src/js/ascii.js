@@ -30,26 +30,4 @@ $(document).ready(() => {
   $(document).mouseup(() => {
     clicking = false;
   })
-
-  function toggleContainer(clicker) {
-    if(contained) {
-      $('.portrait').css('max-height', 1000);
-      $('.portrait').css('max-width', 1500);
-      $('.portrait pre').css('max-height', 1000);
-      $('.portrait pre').css('max-width', 1500);
-      $(clicker).text('put this back in its damn container');
-      contained = false;
-    } else {
-      $('.portrait').css('max-height', 500);
-      $('.portrait').css('max-width', 500);
-      $('.portrait pre').css('max-height', 500);
-      $('.portrait pre').css('max-width', 500);
-      $(clicker).text('get rid of this damn container');
-      contained = true;
-    }
-  }
-  $('#toggle-container').on('click', function(e) {
-    toggleContainer(this);
-    e.preventDefault();
-  });
 });
