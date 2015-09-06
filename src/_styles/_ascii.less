@@ -1,0 +1,33 @@
+.ascii {
+  background: @ascii-background;
+  color: #fff;
+
+  pre::selection {
+    background: @ascii-background; /* WebKit/Blink Browsers */
+  }
+
+  .portrait {
+    position: relative;
+    max-width: 500px;
+    max-height: 500px;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  .portrait pre {
+    font-style: Menlo;
+    font-size: 8px;
+    line-height: 1.2;
+    max-width: 500px;
+    max-height: 500px;
+    height: 100%;
+    margin: 0 auto;
+    overflow-x: scroll;
+    overflow-y: scroll;
+
+    &:hover {
+      transition: line-height 3s ease;
+      line-height: .2;
+    }
+  }
+}
