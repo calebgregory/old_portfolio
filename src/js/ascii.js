@@ -1,6 +1,6 @@
 $(document).ready(() => {
   var clicking = false
-    , fontSize = 13
+    , lineHeight = 1.2
     , currY
     , contained = true;
 
@@ -12,17 +12,16 @@ $(document).ready(() => {
 
       // Mouse click + moving logic here
 
-
-      if(e.pageY <= currY - 5 && fontSize < 28) {
+      if(e.pageY <= currY - 5 && lineHeight < 4.1) {
         if($(window).width() < $('pre').width()) return;
-        fontSize++;
-      } else if(e.pageY > currY + 5 && fontSize > 4) {
-        fontSize--;
+        lineHeight += 0.1;
+      } else if(e.pageY > currY + 5 && lineHeight > .3) {
+        lineHeight -= 0.1;
       }
-      console.log(currY,e.pageY,fontSize)
+      console.log(currY,e.pageY,lineHeight)
       currY = e.pageY;
 
-      $('pre').css('font-size',fontSize+'px');
+      $('pre').css('line-height',lineHeight);
     });
 
   });
