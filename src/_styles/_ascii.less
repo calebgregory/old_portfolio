@@ -4,30 +4,34 @@
 
   position: relative;
 
-  padding-bottom: 350px;
+  width: 370px;
+
+  margin: 0 auto;
+  padding-bottom: 370px;
+  border-radius: 100%;
+
+  overflow: hidden;
 
   .portrait {
     position: absolute;
     bottom: 0;
 
-    max-width: 500px;
-    max-height: 500px;
     z-index: 2;
-
-    overflow: hidden;
+    margin-left: 25px;
 
     &:hover {
-      pre {
+      pre#pre {
         transition: line-height 1s linear;
         line-height: .2;
       }
     }
 
-    pre {
-      max-width: 500px;
-      max-height: 500px;
+    pre#pre {
 
-      margin: 0 auto;
+      background: @ascii-background;
+      color: white;
+
+      border: 0;
 
       font-style: Menlo;
       font-size: 8px;
@@ -43,4 +47,13 @@
     }
   }
 
+  @media (max-width: 410px) {
+    width: 290px;
+    padding-bottom: 290px;
+
+    .portrait pre#pre {
+      font-size: 6px;
+    }
+
+  }
 }
