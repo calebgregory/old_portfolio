@@ -1,4 +1,60 @@
+body {
+  padding-bottom: 70px;
+
+  h1 {
+    font-family: Menlo;
+  }
+
+  a {
+    color: @link-color;
+  }
+
+  .container {
+    background-color: #fff;
+  }
+}
+
 .sidebar {
-  width: 500px;
-  background: #fff;
+  margin-top: 5%;
+
+  .info {
+    margin-top: 55px;
+
+    text-align: center;
+
+    .email {
+      padding: 30px 0;
+    }
+  }
+
+  @media (max-height: 600px) {
+    .info {
+      margin-top: 20px;
+
+      .email {
+        padding: 15px 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 991px) {
+  .wrapper {
+    position: relative;
+  }
+
+  .sidebar {
+    position: fixed;
+  }
+
+  .content {
+    float: right;
+
+    /* Micro ClearFix Mixin */
+    .clearfix{
+      zoom:1;
+      &:before, &:after{ content:""; display:table; }
+      &:after{ clear: both; }
+    }
+  }
 }
