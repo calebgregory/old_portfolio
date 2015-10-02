@@ -1,57 +1,18 @@
 .ascii {
   background: @ascii-background;
-
-  position: relative;
-
   width: 370px;
 
   margin: 0 auto;
   padding-bottom: 370px;
   border-radius: 100%;
 
-  overflow: hidden;
-
-  .portrait {
-    position: absolute;
-    bottom: 0;
-
-    z-index: 2;
-    margin-left: 25px;
-
-    pre {
-
-      background: @ascii-background;
-      color: @ascii-color;
-
-      border: 0;
-
-      font-style: Menlo;
-      font-size: 8px;
-      line-height: 1.2;
-
-      overflow-x: scroll;
-      overflow-y: scroll;
-
-      &::selection {
-        background: @ascii-background; /* WebKit/Blink Browsers */
-      }
-
-      cursor: grab;
-
-      &:active {
-        cursor: grabbing;
-      }
-
-    }
-  }
+  background-image: url(/assets/portrait.jpg);
+  background-position: -10px -55px;
+  background-size: 105%;
+  background-repeat: no-repeat;
 
   @media (max-width: 410px) {
     width: 290px;
     padding-bottom: 290px;
-
-    .portrait pre {
-      font-size: 6px;
-    }
-
   }
 }
