@@ -7,9 +7,12 @@ body {
 
   a {
     color: @link-color;
-    &:hover{
+    &:hover {
       color: @link-color-hover;
       font-weight: bold;
+    }
+    &:active {
+      cursor: none;
     }
   }
 
@@ -21,8 +24,12 @@ body {
 .sidebar {
   margin-top: 5%;
 
+  .hidden-info {
+    display: none;
+  }
+
   .info {
-    margin-top: 55px;
+    margin-top: 45px;
 
     text-align: center;
 
@@ -31,21 +38,56 @@ body {
     }
 
     .email {
-      padding: 30px 0;
+      padding: 10px 0 20px;
+      font-size: 16px;
     }
 
     .sidebar-link {
-      font-size: 16px;
+      font-size: 14px;
       font-weight: bold;
     }
   }
 
-  @media (max-height: 600px) {
-    .info {
-      margin-top: 20px;
+  @media (max-width: 410px) {
 
+    .links {
+      margin-top: 20px;
+    }
+
+  }
+
+  @media(max-height: 730px) {
+    .info {
       .email {
-        padding: 15px 0;
+        padding: 5px 0;
+      }
+    }
+  }
+
+  @media (max-height: 700px) and (min-width: 680px) {
+
+    margin-top: 20px;
+
+    .revealed-info {
+      display: none;
+    }
+
+    .hidden-info {
+      display: inline;
+
+      .links {
+
+        margin-top: 15px;
+        margin-bottom: 25px;
+
+        .email {
+          margin: 10px 0;
+        }
+
+        .sidebar-link {
+          font-size: 24px;
+        }
+
       }
     }
   }
