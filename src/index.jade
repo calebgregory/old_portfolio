@@ -3,8 +3,11 @@ extends _partials/_layout.jade
 block content
   .row.wrapper
     .col-xs-12.col-md-4.col-md-offset-1.sidebar
+      .hidden-info
+        include _partials/_info
       include _partials/_ascii
-      include _partials/_info
+      .revealed-info
+        include _partials/_info
     .col-xs-12.col-md-6.col-md-offset-1.content.clearfix
       h1#technologies Technologies
       include _partials/_technologies
